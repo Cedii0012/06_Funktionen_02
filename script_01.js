@@ -8,9 +8,16 @@
 4. Ausgabe in Konsole : check!
 */
 
+// Modul: Multiplikation a * b |  Test:
+ausgabe(multiplizieren(2,1));
+ausgabe(multiplizieren(2,0));
+function multiplizieren(a,b) {
+    return a * b;
+}
+
 // Modul: Subtraktion a - b |  Test:
-ausgabe(subtrahieren(2,1));
-ausgabe(subtrahieren(2,10));
+// ausgabe(subtrahieren(2,1));
+// ausgabe(subtrahieren(2,10));
 function subtrahieren(a,b) {
     return a - b;
 }
