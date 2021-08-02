@@ -5,14 +5,20 @@
 1. Dateneingabe + -überprüfung 
 2. Auswahl Rechenart 
 3. Fkt. Grundrechenarten 
-4. Ausgabe in Konsole 
+4. Ausgabe in Konsole : check!
 */
 
 
+// Modul: Addition a + b |  Test:
+ausgabe(addieren(2,1));
+function addieren(a,b) {
+    return a + b;
+}
+
 
 // Modul: Konsolenausgabe |  Test:
-ausgabe("Hallo Welt!")
-ausgabe(20);
+// ausgabe("Hallo Welt!")
+// ausgabe(20);
 function ausgabe(outputStr) {
     console.log(outputStr);
 }
