@@ -8,8 +8,8 @@
 4. Ausgabe in Konsole : check!
 */
 
-// startApp();
-
+// Start der Applikation / App
+startApp()
 function startApp() {
   ausgabe(rechner(getZahl1(),getOp(),getZahl2())); 
 }
@@ -23,12 +23,43 @@ function getZahl2() {
  }
 
  // Modul: Operand eingeben | Test:
- ausgabe(getOp());
+// ausgabe(getOp());
  function getOp() {
-     return "-";
+
+     let op = prompt("Bitte + | - | * | / eingeben.");
+
+     // wenn op NICHT gültig ist UND user NICHT auf Abbrechen geklickt hat ...
+     while (!isOpValid(op) && (op !== null)) { 
+        op = prompt("Bitte + | - | * | / eingeben."); // Nochmal ...
+     } 
+    
+     return op;
+
+ }
+
+ // Modul: Operand überprüfen | Test:
+//  ausgabe(isOpValid("+"));
+//  ausgabe(isOpValid("-"));
+//  ausgabe(isOpValid("*"));
+//  ausgabe(isOpValid("/"));
+//  ausgabe(isOpValid(""));
+//  ausgabe(isOpValid("#!?"));
+ function isOpValid(op) {
+
+    // 1. Variante -- switch()
+    // switch (op) {
+    //     case "+":
+    //     case "-":
+    //     case "*":
+    //     case "/":
+    //         return true;    
+    //     default:
+    //         return false;
+    // }
+
+    return op == "+" || op == "-" || op == "*" || op == "/";
  }
  
-
 // Modul: Rechenart auswählen | Tests:
 // ausgabe(rechner(10,"+",4));
 // ausgabe(rechner(10,"-",4));
@@ -99,11 +130,9 @@ function addieren(a,b) {
 // ausgabe("Hallo Welt!")
 // ausgabe(20);
 function ausgabe(outputStr) {
-   
     // if (typeof outputStr == typeof 1) { 
     if (typeof outputStr === "number") { 
         outputStr = "Das Ergebnis ist: " + outputStr;
     }
-
     console.log(outputStr);
 }
