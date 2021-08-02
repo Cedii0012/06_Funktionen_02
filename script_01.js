@@ -8,12 +8,35 @@
 4. Ausgabe in Konsole : check!
 */
 
+// Modul: Rechenart auswählen | Tests:
+ausgabe(rechner(10,"+",4));
+ausgabe(rechner(10,"-",4));
+ausgabe(rechner(10,"*",4));
+ausgabe(rechner(10,"/",4));
+ausgabe(rechner(10,"/",0));
+ausgabe(rechner(10,"#!?",0));
+function rechner(a,op,b) {  
+    // a,b --> Operanden / Operatoren: +,- ..
+    switch (op) {
+        case "+":
+            return addieren(a,b);
+        case "-":
+            return subtrahieren(a,b);
+        case "*":
+            return multiplizieren(a,b);
+        case "/":
+            return dividieren(a,b);
+        default:
+            return "Irgendwas ging schief!";
+    }
+}
+
 // Modul: Division a / b |  Test:
-ausgabe(dividieren(4,2));
-ausgabe(dividieren(4,-2));
-ausgabe(dividieren(1,4));
-ausgabe(dividieren(0,2));
-ausgabe(dividieren(2,0));
+// ausgabe(dividieren(4,2));
+// ausgabe(dividieren(4,-2));
+// ausgabe(dividieren(1,4));
+// ausgabe(dividieren(0,2));
+// ausgabe(dividieren(2,0));
 function dividieren(a,b) {
 
     // kürzer, besser
