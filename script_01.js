@@ -8,9 +8,34 @@
 4. Ausgabe in Konsole : check!
 */
 
+// Modul: Division a / b |  Test:
+ausgabe(dividieren(4,2));
+ausgabe(dividieren(4,-2));
+ausgabe(dividieren(1,4));
+ausgabe(dividieren(0,2));
+ausgabe(dividieren(2,0));
+function dividieren(a,b) {
+
+    // kürzer, besser
+    if (b != 0) {
+        return a / b; 
+    }
+    return "Division durch 0 nicht OK!";
+
+    // ausführlich
+    // if (b == 0) {
+    //     return "Division durch 0 nicht OK!"
+    // } else {
+    //     return a / b; 
+    // }
+
+}
+
+
+
 // Modul: Multiplikation a * b |  Test:
-ausgabe(multiplizieren(2,1));
-ausgabe(multiplizieren(2,0));
+// ausgabe(multiplizieren(2,1));
+// ausgabe(multiplizieren(2,0));
 function multiplizieren(a,b) {
     return a * b;
 }
