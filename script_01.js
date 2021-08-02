@@ -4,7 +4,7 @@
 0. a+b / a-b/ a*b / a/b  // ergebnis c
 1. Dateneingabe + -überprüfung 
 2. Auswahl Rechenart 
-3. Fkt. Grundrechenarten 
+3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : check!
 */
 
@@ -31,8 +31,6 @@ function dividieren(a,b) {
 
 }
 
-
-
 // Modul: Multiplikation a * b |  Test:
 // ausgabe(multiplizieren(2,1));
 // ausgabe(multiplizieren(2,0));
@@ -57,5 +55,11 @@ function addieren(a,b) {
 // ausgabe("Hallo Welt!")
 // ausgabe(20);
 function ausgabe(outputStr) {
+   
+    // if (typeof outputStr == typeof 1) { 
+    if (typeof outputStr === "number") { 
+        outputStr = "Das Ergebnis ist: " + outputStr;
+    }
+
     console.log(outputStr);
 }
