@@ -3,18 +3,39 @@
 /*
 0. a+b / a-b/ a*b / a/b  // ergebnis c
 1. Dateneingabe + -überprüfung 
-2. Auswahl Rechenart 
+2. Auswahl Rechenart : check!
 3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : check!
 */
 
+// startApp();
+
+function startApp() {
+  ausgabe(rechner(getZahl1(),getOp(),getZahl2())); 
+}
+
+function getZahl1() {
+   return 10; 
+}
+
+function getZahl2() {
+    return 4; 
+ }
+
+ // Modul: Operand eingeben | Test:
+ ausgabe(getOp());
+ function getOp() {
+     return "-";
+ }
+ 
+
 // Modul: Rechenart auswählen | Tests:
-ausgabe(rechner(10,"+",4));
-ausgabe(rechner(10,"-",4));
-ausgabe(rechner(10,"*",4));
-ausgabe(rechner(10,"/",4));
-ausgabe(rechner(10,"/",0));
-ausgabe(rechner(10,"#!?",0));
+// ausgabe(rechner(10,"+",4));
+// ausgabe(rechner(10,"-",4));
+// ausgabe(rechner(10,"*",4));
+// ausgabe(rechner(10,"/",4));
+// ausgabe(rechner(10,"/",0));
+// ausgabe(rechner(10,"#!?",0));
 function rechner(a,op,b) {  
     // a,b --> Operanden / Operatoren: +,- ..
     switch (op) {
