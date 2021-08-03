@@ -11,30 +11,35 @@
 // Start der Applikation / App
 startApp()
 function startApp() {
-  ausgabe(rechner(getZahl1(),getOp(),getZahl2())); 
+  ausgabe(rechner(getZahl("1"),getOp(),getZahl("2"))); 
 }
 
-function getZahl1() {
-   return 10; 
+// Modul: Zahl eingeben | Test:
+// ausgabe(getZahl("1"));
+function getZahl(numStr) {
+
+    const displayStr = "Bitte Zahl " + numStr + " eingeben."
+    let zahl = parseInt(prompt(displayStr));
+
+    while (isNaN(zahl)) {
+        zahl = parseInt(prompt(displayStr)); 
+    }
+
+    return zahl; 
 }
 
-function getZahl2() {
-    return 4; 
- }
 
  // Modul: Operand eingeben | Test:
 // ausgabe(getOp());
- function getOp() {
-
+function getOp() {
      let op = prompt("Bitte + | - | * | / eingeben.");
 
      // wenn op NICHT gültig ist UND user NICHT auf Abbrechen geklickt hat ...
      while (!isOpValid(op) && (op !== null)) { 
         op = prompt("Bitte + | - | * | / eingeben."); // Nochmal ...
      } 
-    
-     return op;
 
+    return op;
  }
 
  // Modul: Operand überprüfen | Test:
@@ -127,11 +132,11 @@ function addieren(a,b) {
 }
 
 // Modul: Konsolenausgabe |  Test:
-// ausgabe("Hallo Welt!")
+// ausgabe("Hallo Welt!");
 // ausgabe(20);
 function ausgabe(outputStr) {
     // if (typeof outputStr == typeof 1) { 
-    if (typeof outputStr === "number") { 
+    if (typeof outputStr == "number") { 
         outputStr = "Das Ergebnis ist: " + outputStr;
     }
     console.log(outputStr);
