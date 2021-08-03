@@ -19,15 +19,16 @@ function startApp() {
 function getZahl(numStr) {
 
     const displayStr = "Bitte Zahl " + numStr + " eingeben."
-    let zahl = parseInt(prompt(displayStr));
+    let ziffer =  prompt(displayStr);
+    let zahl = parseInt(ziffer);
 
-    while (isNaN(zahl)) {
-        zahl = parseInt(prompt(displayStr)); 
+    while (isNaN(zahl) && (ziffer !== null)) {
+        ziffer =  prompt(displayStr);
+        zahl = parseInt(ziffer); 
     }
 
     return zahl; 
 }
-
 
  // Modul: Operand eingeben | Test:
 // ausgabe(getOp());
